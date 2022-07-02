@@ -7,13 +7,18 @@ SCRIPT_DIR=`dirname "$SCRIPT"`
 cd "$SCRIPT_DIR"
 unset SCRIPT SCRIPT_DIR
 
-readonly -a DIRS=(
-basic
-cv
-fonts
-letter
-)
-for DIR in "${DIRS[@]}"; do
-	"$DIR"/build.sh
+FILE_BASE='cv'
+
+for I in {1..2}; do
+	xelatex "$FILE_BASE".tex
 done
-unset DIR
+unset I
+
+for EXT in \
+	aux \
+	log \
+	out \
+	; do
+	rm "$FILE_BASE"."$EXT"
+done
+unset EXT
