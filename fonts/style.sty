@@ -1,0 +1,27 @@
+\ProvidesPackage{style}
+
+\RequirePackage{fontspec}
+\RequirePackage{geometry}
+
+% See the ‘fontspec’ documentation and its ‘fontspec-example.tex’ file.
+
+% To find out a font's name:
+% The name listed by the ‘Fonts’ application.
+% ‘Preferred family:’ or ‘Family:’ from ‘otfinfo -i path/to/font-file’.
+
+% Settings that make the font larger or smaller:
+%
+% The \documentclass options 10pt, 12pt, etc.
+%
+% The ‘Scale’ option of the \set*font commands:
+% Scale=‹number› (e.g. Scale=1.2).
+% Scale=MatchLowercase or MatchUppercase matches the current default font.
+
+% First \setmainfont.
+% Scale=MatchLowercase matches the existing main font being replaced.
+\setmainfont{DejaVu Serif}[Scale=MatchLowercase]
+
+% Then optionally \setsansfont, \setmonofont.
+% Scale=MatchLowercase matches the \setmainfont you've just set.
+\setsansfont{DejaVu Sans}[Scale=MatchLowercase]
+\setmonofont{DejaVu Sans Mono}[Scale=MatchLowercase]
