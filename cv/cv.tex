@@ -1,0 +1,75 @@
+\documentclass[a4paper]{article}
+\usepackage{style}
+
+\begin{document}
+\begin{center}
+	\textbf{\large Firstname Lastname}
+
+	City, Country
+
+	\email{emailaddress@example.org}
+\end{center}
+
+\begin{center}
+	This is an optional short summary of yourself (skills, interests).
+\end{center}
+
+\cvsection{Core Skills}
+
+\splitItems{
+\item This is an optional brief list of skills.
+\item This wraps over multiple lines to show the inter-column spacing.
+}{
+\item The list can use two columns.
+\item This item is short.
+\item This wraps over multiple lines to show the right margin of text.}
+
+\cvsection{Work Experience}
+
+\entry
+{2005~Jul -- 2007~Sep}
+{Role}{Employer}
+{City, Country}
+{This paragraph is long enough to wrap over multiple lines.
+It shows \emph{emphasized text} and a hyperlink \url{https://example.org}.
+
+This is a second paragraph.
+
+\begin{itemize}
+	\item This is a list.
+	\item Compare its formatting (line spacing, indentation)
+		with the formatting of regular text lines
+		which are not part of a list.
+\end{itemize}
+
+This paragraph follows the list.}
+
+\sep
+\entry
+{2001~Jan -- 2003~Mar}
+{Position}{Company}
+{City, Country}
+{This is another CV entry in the same section.}
+
+\cvsection{Education and Training}
+
+\entry
+{1991~Sep -- 1994~Jun}
+{Degree}{Institution}
+{City, Country}
+{This entry is in a new section.}
+
+\cvsection{Personal Skills}
+
+\cvsubsection{Computer Skills}
+
+This text is in a subsection.
+
+\cvsubsection{Communication Skills}
+
+This text is in a subsection.
+
+\cvsubsection{Other Skills}
+
+This text is in a subsection.
+\end{document}

@@ -1,0 +1,29 @@
+\ProvidesPackage{style}
+
+\RequirePackage{enumitem}
+\RequirePackage{geometry}
+\RequirePackage{tabularx}
+\RequirePackage{xcolor}
+
+% The hyperref manual says: “Make sure it comes last of your loaded packages”.
+\RequirePackage[colorlinks,urlcolor=violet]{hyperref}
+
+\setcounter{secnumdepth}{1}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{nosep,leftmargin=*}
+
+\newcommand{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
+
+\newcommand{\cvsection}[1]{\subsection[#1]{\centering#1}}
+\newcommand{\cvsubsection}[1]{\subsubsection{#1}}
+
+\newcommand{\splitItems}[2]{\begin{tabularx}{\textwidth}{@{}XX@{}}
+	\begin{itemize}#1\end{itemize} & \begin{itemize}#2\end{itemize} \\
+\end{tabularx}}
+
+% Dates, Role, Company, City, Description
+\newcommand{\entry}[5]{\textbf{#1}\hfill\textbf{#3}\newline
+\textbf{#2}\hfill\textbf{#4}\newline
+#5}
+
+\newcommand{\sep}{\medskip}
